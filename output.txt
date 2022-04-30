@@ -1,0 +1,9 @@
+HHHello
+Hello
+Hello
+
+fileName: input.txt
+rowsCount: 3
+lettersCount: 17
+symbolsStatistics:{H=5, e=3, l=6, o=3}
+topNPopularSymbols: [l, H, o]
