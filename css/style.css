@@ -1,0 +1,20 @@
+body {
+	background-color: Beige;
+	border: 2px;
+	box-sizing: border-box margin-left black;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 20px;
+	margin-bottom: 15px;
+
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+ul {
+	border: 2px black solid;
+}
+
+a {
+	text-align: center;
+}
