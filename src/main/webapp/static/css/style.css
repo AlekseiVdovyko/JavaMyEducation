@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main__page-header {
+    position: relative;
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main__page-header:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main__page-header-sitename {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    color: #fff;
+    font-size: 46px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content__holder {
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.content__holder.cities__list {
+    margin-top: 50px;
+}
+
+.content__holder.cities__list > h2 {
+    margin-left: 15px;
+}
+
+.content__holder .cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, calc(100% / 4)));
+    justify-content: space-between;
+}
+
+.content__holder .cities .city__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cacaca;
+    margin: 15px 15px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.content__holder .cities .city__item-image {
+    position: relative;
+    width: 100%;
+    /*width: 400px;*/
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content__holder .cities .city__item-image:before {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    top: -150px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all ease-in-out 0.2s;
+}
+
+
+.content__holder .cities .city__item:hover > .city__item-image:before {
+    top: 0;
+    opacity: 1;
+}
+
+
+.content__holder .cities .city__item-image .city__item-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    transition: all ease-in-out 0.2s;
+}
+
+.content__holder .cities .city__item:hover > .city__item-image .city__item-title {
+    text-shadow: none;
+}
+
+.content__holder .cities .city__item-image .weather {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.content__holder .cities .city__item:hover > .city__item-image .weather {
+    opacity: 1;
+}
+
+.content__holder .cities .city__item-content {
+   padding: 20px;
+}
+
+.content__holder .cities .city__item-details-button-wrapper {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.add__city-button,
+.content__holder .cities .city__item-details-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    background: #167bff;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.add__city-button:hover,
+.content__holder .cities .city__item-details-button:hover {
+    background: #0048ff;
+}
+
+.add__city-button {
+    position: absolute;
+    right: 45px;
+}
+.content__holder.city__info .text h1{
+    margin-bottom: 20px;
+}
+
+.content__holder.city__info .text img {
+    float: left;
+    margin-right: 20px;
+    width: 450px;
+    height: 337px;
+    object-fit: cover;
+}
+
+.content__holder.city__info .info {
+    clear: both;
+    padding-top: 30px;
+}
+
+.content__holder.city__info form{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.content__holder.city__edit form button {
+    display: inline-block;
+    margin-top: 30px;
+}
+.content__holder.city__info form .button-red {
+    background: red;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.content__holder.city__info form .button-red:hover {
+    background: #cd0101;
+}
+
+.content__holder.city__edit form .button-green {
+    background: forestgreen;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.content__holder.city__edit form .button-green:hover {
+    background: #1b5e1b;
+}
+
+.content__holder.city__edit form .button-orange {
+    background: orange;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.content__holder.city__edit form .button-orange:hover {
+    background: #da9300;
+}
+
+.form-fields__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-fields__holder label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-fields__holder label input {
+    padding: 2px 5px;
+    border: none;
+    border-radius: unset;
+    outline: none;
+    background-color: #cacaca;
+}
+
+form button {
+    display: flex;
+    margin: 20px 0;
+    padding: 5px 30px;
+    border: none;
+    color: #fff;
+    background-color: #167bff;
+    transition: background-color ease-in-out 0.2s;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #0048ff;
+}

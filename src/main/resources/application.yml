@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+    whitelabel.enabled: false
+    include-stacktrace: always
+
+spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
